@@ -1,5 +1,5 @@
 # Bookshelf
-Aplikasi web untuk memanfaatkan sistem rak buku yang dibuat menggunakan framework layout bootstrap \.
+Aplikasi web untuk memanfaatkan sistem rak buku yang dibuat menggunakan framework layout bootstrap.
 <p align="left">
 <br>
    <img src="https://user-images.githubusercontent.com/87967665/142652315-6d61e6e8-6a0a-4080-ad2e-22f334fd7523.png" border="0" width="350">
