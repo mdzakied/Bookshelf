@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bookshelf</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo Bookshelf 2.png" rel="icon">
+  <link href="assets/img/Logo Bookshelf 2.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/sweetalret2/sweetalert2.min.css" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= cover ======= -->
+  <section id="cover">
+    <div class="cover-container">
+      <a href="index.html" class="cover-logo" data-aos="zoom-in"><img src="assets/img/Logo Bookshelf.png" alt=""></a>
+      <h1 data-aos="zoom-in">Welcome To Project Bookshelf</h1>
+      <h2 data-aos="fade-up">Submission Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage</h2>
+      <a data-aos="fade-up" data-aos-delay="200" href="#bookshelf" class="btn-cover">Get Started</a>
+    </div>
+  </section>
+  <!-- end cover -->
+
+  <main id="main">
+
+    <!-- ======= bookshelf ======= -->
+    <section id="bookshelf" class="bookshelf">
+      <div class="container">
+        <div class="row">
+          
+          <!--add-book-->
+          <div class="add-book col-lg-7 mt-5 ">
+
+            <form id="form" class="form-box" data-aos="fade-right">
+
+              <div class="txt">
+                <h2>Add Book</h2>
+                <p>Tambahkan Bukumu Yang Belum Dibaca Disini</p>
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">  
+                  <div class="input-group-text"><i class='bx bxs-bookmark-alt bx-sm'></i></div>
+                </div>
+                <input type="text" class="form-control" id="title" placeholder="Title Book" required oninvalid="this.setCustomValidity('Masukan judul Buku')"
+                oninput="this.setCustomValidity('')">
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class='bx bxs-user bx-sm'></i></div>
+                </div>
+                <input type="text" class="form-control" id="author" placeholder="Author Book" required oninvalid="this.setCustomValidity('Masukan Penulis Buku')"
+                oninput="this.setCustomValidity('')">
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class='bx bxs-calendar bx-sm'></i></div>
+                </div>
+                <input type="number" min="1900" max="2021" class="form-control" id="year" placeholder="Year Book" required oninvalid="this.setCustomValidity('Masukan Tahun Buku')"
+                oninput="this.setCustomValidity('')">
+              </div>
+
+              <div class="text-center mt-4">
+                <button id="btn-add-book" type="submit" class="btn-add-book">Add Book</button>
+              </div>
+            </form>
+
+          </div>
+
+          <!--search-book-->
+          <div class="search-book col-lg-5">
+            <div class="search-box mt-2" data-aos="fade-left">
+
+              <img src="assets/img/search_book-512-removebg-preview.png" alt="" class="img">
+
+              <div class="txt">            
+                <h4>Search Book</h4>
+                <p>Cari judul bukumu disini dari daftar buku sampai yang sudah terbaca</p>
+              </div> 
+              
+              <form id="searchBook">
+
+                <div class="search-form-box">            
+                  <input id="searchBookTitle" class="search-form" type="text" placeholder="Search">
+                </div> 
+
+                <div class="buttom mt-4">
+                  <button id="searchSubmit" type="submit" class="btn-search"><i class='bx bx-search-alt'></i></button>
+                  <button id="searchReset" type="submit" class="btn-reset"><i class='bx bx-reset'></i></button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End bookshelf -->
+
+    <!-- ======= list-book ======= -->
+    <section id="list-book" class="list-book">
+      <div class="container">
+        <div class="row">
+
+          <!-- search-text -->
+          <div class="col-lg-6">
+            <div class="txt" id="searchText">
+              <h4 class="container-header">Hasil pencarian untuk "<span id="searchWord"> </span>"</h4>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mt-4" data-aos="fade-right">
+
+            <div class="txt-list">
+              <h2>Books</h2>
+            </div>
+
+            <div class="list-item" id="books">
+              
+            </div>
+            
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="fade-left">
+
+            <div class="txt-list">
+              <h2>Completed Books</h2>
+
+            </div>
+
+            <div class="list-item" id="completed-books">
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End list-book -->
+
+  </main>
+  <!-- End main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container footer-bottom clearfix">
+      <div class="txt">
+        Submission Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
+      </div>
+      <div class="credits">
+        Submission by <a href="https://www.dicoding.com/"> Dicoding</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+ 
+
+  <!-- Vendor JS Files -->
+
+  <!-- AOS -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  
+  <!-- AOS JS -->
+  <script>
+    function aos_init() {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false
+        });
+    }
+    window.addEventListener('load', () => {
+    aos_init();
+    });
+  </script> 
+
+  <!-- Sweetalert2 JS -->
+  <script src="assets/vendor/sweetalret2/sweetalert2.all.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="assets/js/data.js" type="text/javascript"></script>
+  <script src="assets/js/dom.js" type="text/javascript"></script>
+  <script src="assets/js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

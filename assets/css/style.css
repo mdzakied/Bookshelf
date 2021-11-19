@@ -1,0 +1,367 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #555555;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# cover
+--------------------------------------------------------------*/
+#cover {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/2457.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+#cover .cover-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#cover .cover-logo {
+  margin-bottom: 30px;
+}
+
+#cover h1 {
+  margin: 0 0 30px 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+  color: #fff;
+}
+
+#cover h2 {
+  color: #aeaeae;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#cover .btn-cover {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 5px;
+  margin: 10px;
+  color: #fff;
+  background: #d25203;
+}
+
+#cover .btn-cover:hover {
+  transition: 0.5s;
+  background: #fff;
+  color: #d25203;
+}
+
+@media (min-width: 1024px) {
+  #cover {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #cover h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #cover h2 {
+    line-height: 22px;
+  }
+}
+
+/*--------------------------------------------------------------
+# bookshelf
+--------------------------------------------------------------*/
+.bookshelf {
+  padding: 40px 20px;
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+}
+
+/*add-book*/
+.add-book .form {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.add-book .btn-add-book {
+  color: white;
+  background: #e19d72;
+  padding: 5px 15px;
+  border: none;
+}
+
+.add-book .btn-add-book:hover {
+  background: #d36c2c;
+}
+
+/*search-book*/
+.search-book .search-box {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.search-book .img {
+  margin-left: 30px;
+  width: 130px;
+  height: 130px;
+}
+
+.search-book .search-form {
+  padding: 0 5px ;
+  width: 50%;
+  text-align: center;
+  border-color: gray;
+  outline: none;
+  border-radius: 50px;
+}
+
+.search-book .btn-search {
+  border: none;
+  border-radius: 100%;
+  color: white;
+  background-color: #e19d72;
+  font-size: 20px;
+}
+
+.search-book .btn-reset {
+  border: none;
+  margin-left: 10px;
+  border-radius: 100%;
+  color: white;
+  background-color: #e19d72;
+  font-size: 20px;
+}
+
+.search-book .btn-search:hover {
+  background-color: #d25203;
+}
+
+.search-book .btn-reset:hover {
+  background-color: #d25203;
+}
+
+/*--------------------------------------------------------------
+# list-book
+--------------------------------------------------------------*/
+.list-book {
+  padding: 40px 0 0 0;
+  background: whitesmoke;
+  background-color: white;
+}
+
+/*search-text*/
+#searchText{
+  display: none;
+}
+
+#searchWord{
+  color: #d25203;
+}
+
+/*item*/
+.list-book .list-item {
+  padding: 20px;
+  margin: 20px;
+}
+
+.list-book .txt-list {
+  padding: 20px 10px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0px 0 25px rgb(0 0 0 / 8%);
+}
+
+.list-book .item {
+  border-radius: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 10px;
+  background: white;
+  display: block;
+  box-shadow: 0px 0 25px rgb(0 0 0 / 8%);
+}
+
+.list-book .inner {
+  width: 70%;
+  padding: 20px;
+}
+
+.list-book .btn {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-book .item .row > .inner h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e8b393;
+}
+
+.list-book .item .row > .inner h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.list-book .item .row > .inner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.list-book .item:hover {
+  box-shadow: 0px 0 25px #e8b393;
+}
+
+.list-book .read-button {
+  width: 10%;
+  padding: 20px;
+  background: url('../img/bx-bookmark-plus.svg');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.list-book .read-button:hover {
+  background: url('../img/bxs-bookmark-plus.svg');
+  background-size: contain;
+}
+
+.list-book .trash-button{
+  width: 10%;
+  padding: 20px;
+  background: url('../img/bx-trash.svg');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.list-book .trash-button:hover {
+  background: url('../img/bxs-trash.svg');
+  background-size: contain;
+}
+
+.list-book .unread-button{
+  width: 10%;
+  padding: 20px;
+  background: url('../img/bx-bookmark-minus.svg');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.list-book .unread-button:hover {
+  background: url('../img/bxs-bookmark-minus.svg');
+  background-size: contain;
+}
+
+@media (max-width: 425px) {
+
+  #searchText{
+    transform: scale(0.8);
+  }
+
+  .list-book .inner {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .list-book .btn {
+    width: 100%;
+  }
+
+  .list-book .trash-button{
+    margin-left: 0px;
+  }
+  
+  .list-book .inner, .read-button, .trash-button, .unread-button {
+    transform: scale(0.8);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: url("../img/2457.jpg");
+  background-size: cover;
+  color: #fff;
+  font-size: 14px;
+  position: relative
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+
+#footer .footer-bottom {
+  border-top: 1px solid #222222;
+  z-index: 2;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#footer .txt {
+  text-align: center;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+#footer .credits a {
+  color: #d25203;
+}
