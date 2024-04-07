@@ -1,7 +1,7 @@
 <h1 align="center" id="title">Bookshelf</h1>
 
 
-<p align="center" id="description">Jasign is a demo web application to manage books.</p>
+<p align="center" id="description">Bookshelf is a demo web application to manage books.</p>
 
 <h2>📷 Project Screenshots :</h2>
 
